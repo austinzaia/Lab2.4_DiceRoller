@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class DiceRoller {
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+
+		int numDice;
+		int numSides;
+		System.out.println("Enter the number of dice to roll: ");
+		numDice = in.nextInt();
+		System.out.println("Enter the number of sides on the dice: ");
+		numSides = in.nextInt();
+		int total = roll(numDice, numSides);
+
+	}
+
+	static int roll(int numDice, int numSides) {
+		Scanner in = new Scanner(System.in);
+		{
+			int sum = 0;
+			for(int i = 0; i < numDice; i++) {
+				System.out.println("Dice #" + (i + 1) + " came up: ");
+				int n = in.nextInt();
+				sum = sum + n;
+			}
+			return sum;
+		}
+	}
+}
